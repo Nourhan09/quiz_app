@@ -37,12 +37,13 @@ class _QuizPageState extends State<QuizPage> {
             GestureDetector(
               onTap: () {
                 setState(() {
-                  if (a[index] == 'true') {
-                    index++;
+                  if (q[index] == 'true') {
                     score.add(Icon(Icons.check, color: Colors.green));
                   } else {
                     score.add(Icon(Icons.close, color: Colors.red));
                   }
+
+                  index++;
                 });
               },
               child: Container(
@@ -60,7 +61,7 @@ class _QuizPageState extends State<QuizPage> {
             GestureDetector(
               onTap: () {
                 setState(() {
-                  if (a[index] == 'false') {
+                  if (q[index] == 'false') {
                     score.add(Icon(Icons.check, color: Colors.green));
                   } else {
                     score.add(Icon(Icons.close, color: Colors.red));
